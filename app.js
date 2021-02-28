@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('index');
 });
 
 app.listen(4000, () => console.log('Example app listening on port 4000!'));
