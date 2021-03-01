@@ -8,11 +8,6 @@ h1 {
 
 }
 
-a:hover{
-  color: #78c4d4;
-}
-
-
 /* Top Section */
 .top-section {
   background-color: #f9f9f9;
@@ -27,7 +22,7 @@ a:hover{
 
 
 .nav-link {
-  font-family: 'Noto Serif', serif;
+font-family: 'Source Sans Pro', serif;
   font-size: 1.25rem;
       color: #495464;
       letter-spacing: 2px;
@@ -59,36 +54,56 @@ a:hover{
 
 /* Mid Section */
 .mid-section{
-  padding: 5% 15%;
+  padding: 5% 10%;
   text-align: center;
-  font-size: 1.25rem;
   background-color: white;
+    font-family: 'Source Sans Pro', serif;
+
+}
+
+.section-title{
+  font-size: 2.5rem;
+  padding-bottom: 30px;
+}
+
+.section-subtitle{
+  font-size:1.75rem;
+  text-decoration: overline;
+  padding-top: 7%;
+}
+
+.circle-container a{
+  position: relative;
+  text-decoration: none;
+  font-family: 'Source Sans Pro', serif italic;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+
 }
 
 
-.container-p{
-  padding-bottom: 30px;
-  font-family: 'Source Sans Pro', serif;
-  font-size: 3rem;
+.text-box{
+  position: absolute;
+   top: -40%;
+   left: 25%;
+   width: 50%;
+   height: auto;
+}
 
+
+
+.circle-container:hover .prod-image {
+  opacity: 0.5;
 }
 
 .prod-image {
   border-radius: 100px;
   width: 200px;
   margin: 20px;
-
   z-index: 0;
 }
-
-.caroulse-caption{
-  position:relative;
-  z-index: 2;
-}
-
-
-
-
 
 
 
