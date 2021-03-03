@@ -1,7 +1,5 @@
 const express= require('express')
-const bodyParser = require('body-parser')
 const ejs = require('ejs')
-const fetch = require("node-fetch");
 const axios = require('axios');
 const _ = require('lodash');
 require('dotenv').config()
@@ -11,33 +9,37 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
 
-app.use(express.static(__dirname + "public"));
+app.use(express.static("public"));
 
 
 
 app.get('/', (req, res) => {
 
 const apiKey= process.env.OPENWEATHER_KEY;
-// trying to find a way to display weather on website
-  async function fetchWeather() {
-  const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Riccione&appid='+ apiKey + '&units=metric');
-  const wea = await response.json();
-  return wea;
-}
+// display temperature of Riccione on the website
+axios.get('https://api.openweathermap.org/data/2.5/weather?q=Riccione&appid='+ apiKey + '&units=metric')
+  .then( (response) => {
 
-fetchWeather().then(wea => {
-  document.querySelector("#cityName").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(response.data.main.temp);
-})
-;
+  let cityName= response.data.name
+  let temp = Math.round(response.data.main.temp)
+  let weather = {
+    city: cityName,
+    temperature: temp
+  }
+    res.render('index', {
+      weatherCity: weather.city,
+      weatherTemperature: weather.temperature} );
+  }
+)
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
 
 
 
-  res.render('index', );
+
 });
 
 app.get('/prodotti', (req, res) => {
