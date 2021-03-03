@@ -17,11 +17,14 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static("public"));
 
+const apiKey= config.OPENWEATHER_KEY;
 
 app.get('/', (req, res) => {
 
+
+//trying to find a way to display weather on website
 //   async function fetchWeather() {
-//   const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Riccione&appid=7146132179e874b6fed613bd87c02ac2&units=metric');
+//   const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Riccione&appid='+ apiKey + '&units=metric');
 //   const wea = await response.json();
 //   return wea;
 // }
