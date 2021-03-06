@@ -37,15 +37,35 @@ text-decoration: none;
 padding: 0;
 }
 
+.weatherDiv {
+position: fixed;
+z-index: 2;
+top:10px;
+   right: 10px;
+
+}
+.weatherDiv p, img {
+  margin: -4px;
+}
+
+.weatherIcon{
+  width: 50px;
+  height: auto
+}
+
 
 .nav-link {
 font-family: 'Source Sans Pro', serif;
   font-size: 1.1rem;
       color: #495464;
       letter-spacing: 2px;
-
     }
 
+.nav-link:hover{
+  color:#6ddccf;
+  text-shadow: 1px 0.5px0.51px grey;
+cursor:pointer;
+}
 /* Cover Section */
 .cover {
   background-image: url("/images/cover2.jpg");

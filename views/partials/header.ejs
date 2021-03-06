@@ -21,12 +21,16 @@
 
   <div class=" container-fluid header">
     <div class="top-section">
-      <p>  <a href="mapslink">Galleria del Parco 76, 47838 Riccione </a>  ||| Tel: 0123456798</p>
+      <p>  <a href="/contatti">Galleria del Parco 76, 47838 Riccione </a>  ||| Tel: 0123456798</p>
     </div>
 <div class="weatherDiv">
-<p > <%= weatherCity %> </p>
-<p ><%= weatherTemperature %> </p>
+<p><%= city %> </p>
+<img  src= "<%= icon %>" class="weatherIcon">
+<p > <%= temperature %></p>
+
 </div>
+<div class="">
+
 
     <nav class="navbar navbar-expand-lg d-flex justify-content-center header">
       <h1>Merceria <br> L'Intimo di Paola</h1>
@@ -45,4 +49,5 @@
         </li>
       </ul>
     </nav>
+    </div>
   </div>
