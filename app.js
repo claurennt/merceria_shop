@@ -59,8 +59,18 @@ app.get('/contatti', (req, res) => {
 
 });
 
-app.get('/prodotti/canottiere-donna', (req, res) => {
-  res.render('canottiere-donna');
+app.get('/prodotti/:productName', (req, res) => {
+  const productName = req.params.productName
+
+  weather.getWeather().then((result) => {
+    res.render(productName, {
+      city: result.city,
+      icon: result.icon,
+      temperature: result.temperature,
+
+    })
+
+});
 });
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));

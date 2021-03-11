@@ -2,7 +2,9 @@ body{
   margin-top:0;
   text-align:center;
 }
-
+.navbar-toggler{
+  color:red;
+}
 h1 {
   font-family: 'Lora', serif, italic;
   font-size: 3rem;
@@ -10,7 +12,9 @@ h1 {
   color:#495464;
   text-shadow: 3px 3px 3px #e8e8e8;
   text-align: center;
-  padding: 0 10%;
+  padding: 0 0;
+  width:100%;
+  display: inline-block;
 }
 ul{
     padding: 0 6%;
@@ -34,13 +38,15 @@ text-decoration: none;
   background-color: #f9f9f9;
   width: 100%;
   margin: 0;
-padding: 0;
+}
+nav.header{
+  padding: 2% 0;
 }
 
 .weatherDiv {
-position: fixed;
+  position: absolute;
 z-index: 2;
-top:10px;
+top:25px;
    right: 10px;
 
 }
@@ -63,7 +69,7 @@ font-family: 'Source Sans Pro', serif;
 
 .nav-link:hover{
   color:#6ddccf;
-  text-shadow: 1px 0.5px0.51px grey;
+  text-shadow: 1px 0.5px 0.51px grey;
 cursor:pointer;
 }
 /* Cover Section */
@@ -87,12 +93,13 @@ cursor:pointer;
 
 /* Prodotti Page */
 .prodotti-page{
-  padding: 2% 10%;
+  padding: 2%;
   text-align: center;
   background-color: white;
     font-family: 'Source Sans Pro', serif;
 font-size: 2.3rem;
 }
+
 
 
 .section-subtitle{
@@ -137,6 +144,45 @@ hr{
   margin-top: 10px;
 }
 
+/* prodottiName */
+.productsDiv{
+  margin-left: 2%;
+}
+.cardCol{
+  display: inline-block;
+  padding: 1%;
+  width: 18%;
+  border: thin 1px grey;
+}
+
+.card-text{
+  font-size: 1rem;
+}
+
+.carrello{
+  position: absolute;
+  display: fixed;
+  z-index: 2;
+  top: 270px;
+  right: 15px;
+  border: 1px red solid;
+  height: 50%;
+  min-width: 20%;
+  margin: 0 10px;
+  margin-right: 5px;
+
+}
+.carrello h4 {
+  margin-top:0;
+  padding top: 0.5px;
+  text-decoration: underline;
+}
+.carrello li {
+  padding: 0;
+    text-align: left;
+}
+
+
 /* storia */
 .img-news{
   width:30%;
@@ -164,4 +210,11 @@ hr{
   padding: 1% 7%;
   margin-bottom: 0;
   font-size: 0.8rem;
+}
+
+@media  (max-width: 900px){
+  .brandTitle {
+width:80%;
+padding-left: 80px;
+  }
 }
