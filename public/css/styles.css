@@ -146,15 +146,19 @@ hr{
 
 /* prodottiName */
 .productsDiv{
-  margin-left: 2%;
+  margin-left: 1%;
+      font-family: 'Source Sans Pro', serif;
 }
 .cardCol{
-  display: inline-block;
-  padding: 1%;
-  width: 18%;
-  border: thin 1px grey;
+  margin: 1%;
+width: 12rem;
+  border: solid 0.5px grey;
+
 }
 
+.cardBody{
+
+}
 .card-text{
   font-size: 1rem;
 }
