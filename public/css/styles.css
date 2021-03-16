@@ -146,29 +146,20 @@ hr{
 
 /* prodottiName */
 .productsDiv{
-  margin-left: 1%;
+  margin: 0 auto;
       font-family: 'Source Sans Pro', serif;
 }
 .cardCol{
-  margin: 1%;
-width: 12rem;
+margin: 15px;
   border: solid 0.5px grey;
-
+  width: 20%;
 }
 
-.cardBody{
-
-}
 .card-text{
   font-size: 1rem;
 }
 
-.carrello{
-  position: absolute;
-  display: fixed;
-  z-index: 2;
-  top: 270px;
-  right: 15px;
+.cart{
   border: 1px red solid;
   height: 50%;
   min-width: 20%;
@@ -176,12 +167,12 @@ width: 12rem;
   margin-right: 5px;
 
 }
-.carrello h4 {
+.cart h4 {
   margin-top:0;
   padding top: 0.5px;
   text-decoration: underline;
 }
-.carrello li {
+.cart li {
   padding: 0;
     text-align: left;
 }

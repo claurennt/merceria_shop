@@ -1,7 +1,9 @@
 const express = require('express')
 const ejs = require('ejs')
 const fetch = require('node-fetch');
+const mongoose = require('mongoose')
 const weather = require(__dirname + '/weather.js')
+
 // const _ = require('lodash');
 
 
