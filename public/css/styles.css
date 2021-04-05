@@ -2,54 +2,34 @@ body{
   margin-top:0;
   text-align:center;
 }
-.navbar-toggler{
-  color:red;
-}
-h1 {
-  font-family: 'Lora', serif, italic;
-  font-size: 3rem;
-  font-weight: 700;
-  color:#495464;
-  text-shadow: 3px 3px 3px #e8e8e8;
-  text-align: center;
-  padding: 0 0;
-  width:100%;
-  display: inline-block;
-}
-ul{
-    padding: 0 6%;
-}
 
-/* Header Section */
+a:hover {
+  cursor:pointer
+}
+/* Header.ejs*/
 
 .top-section{
-    background-color: rgb(223, 243, 244);
+    background-color: rgb(109, 220, 207, 0.4);
 }
 
 .top-section a{
-color: green;
+color: #495464;
 text-decoration: none;
+font-weight: 400;
 }
 
 .top-section a:hover{
-  color:grey;
-}
-.header {
-  background-color: #f9f9f9;
-  width: 100%;
-  margin: 0;
-}
-nav.header{
-  padding: 2% 0;
+text-decoration: underline;
 }
 
+/* Weather Widget */
 .weatherDiv {
   position: absolute;
 z-index: 2;
-top:25px;
    right: 10px;
 
 }
+
 .weatherDiv p, img {
   margin: -4px;
 }
@@ -58,7 +38,25 @@ top:25px;
   width: 50px;
   height: auto
 }
+.header {
+  background-color: #f9f9f9;
+}
 
+/* Nav Bar */
+h1 {
+  font-family: 'Lora', serif, italic;
+  font-size: 3rem;
+  font-weight: 700;
+  color:#495464;
+  text-shadow: 3px 3px 3px #e8e8e8;
+  padding: 0;
+  width:100%;
+  display: inline-block;
+}
+
+.navbar-toggler{
+  color:#6ddccf;
+}
 
 .nav-link {
 font-family: 'Source Sans Pro', serif;
@@ -70,14 +68,31 @@ font-family: 'Source Sans Pro', serif;
 .nav-link:hover{
   color:#6ddccf;
   text-shadow: 1px 0.5px 0.51px grey;
-cursor:pointer;
+cursor: pointer;
+}
+
+.dropdown-menu {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.dropdown-item {
+  padding: 3px 8px;
+
+}
+
+.dropdown-item:hover{
+  background-color: rgb(109, 220, 207, 0.4);
+  text-shadow: 1px 0.5px 0.51px grey;
+  cursor:pointer;
 }
 /* Cover Section */
 .cover {
   background-image: url("/images/cover2.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 250px 100px;
+  padding: 230px 100px;
   margin: 3% 1%;
 }
 
@@ -145,38 +160,44 @@ hr{
 }
 
 /* prodottiName */
-.productsDiv{
-  margin: 0 auto;
-      font-family: 'Source Sans Pro', serif;
-}
-.cardCol{
-margin: 15px;
-  border: solid 0.5px grey;
-  width: 20%;
+
+.card {
+    border: none;
+    border-radius: 0px;
+    background-color: #fff;
+    margin-bottom: 8%;
 }
 
-.card-text{
-  font-size: 1rem;
+.text1 {
+    font-size: 13px;
+    color:  #495464
 }
 
-.cart{
-  border: 1px red solid;
-  height: 50%;
-  min-width: 20%;
-  margin: 0 10px;
-  margin-right: 5px;
-
-}
-.cart h4 {
-  margin-top:0;
-  padding top: 0.5px;
-  text-decoration: underline;
-}
-.cart li {
-  padding: 0;
-    text-align: left;
+.info {
+    line-height: 17px
 }
 
+.cartDiv{
+    background-color: #98ded9;
+    border-style: dotted;
+}
+
+.cartBar {
+    background: #98ded9;
+    width: 75%;
+}
+
+.btn-link{
+    color:  #495464;
+    text-decoration: none;
+    border-style: none;
+}
+.btn-link:focus{
+  box-shadow: none;
+}
+.cursor {
+    cursor: pointer
+}
 
 /* storia */
 .img-news{

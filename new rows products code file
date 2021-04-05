@@ -1,0 +1,29 @@
+<!-- <div class="cartBar  text-center mx-auto  m-2 cursor"> <button type="submit" name="button" class="btn btn-link text-uppercase">Aggiungi al carrello</button> </div>
+
+<div class="col-lg-3 col-md-4 ">
+ <div class="card m-2">
+   <div class="productCard align-items-center m-0 text-center"> <img src="/images/canotta4.jpg" class="rounded-bottom" width="200">
+
+   </div>
+   <div class="cartBar  text-center mx-auto  m-2 cursor"> <button type="submit" name="button" class="btn btn-link text-uppercase">Aggiungi al carrello</button> </div>
+ </div>
+</div>
+<div class="col-lg-3 col-md-4  ">
+ <div class="card m-2">
+   <div class="productCard align-items-center m-0 text-center">
+     <img src="/images/canotta4.jpg" class="rounded-bottom" width="200">
+
+   </div>
+   <div class="cartBar  text-center mx-auto  m-2 cursor"> <button type="submit" name="button" class="btn btn-link text-uppercase">Aggiungi al carrello</button> </div>
+ </div>
+</div>
+<div class="col-lg-3 col-md-4 ">
+ <div class="card m-2">
+   <div class="productCard align-items-center m-0 text-center"> <img src="/images/canotta4.jpg" class="rounded-bottom" width="200">
+     <div class=" align-items-center m-0 text-center"> <img src="/images/canotta4.jpg" class="rounded-bottom" width="200">
+
+     </div>
+     <div class="cartBar  text-center mx-auto  m-2 cursor"> <button type="submit" name="button" class="btn btn-link text-uppercase">Aggiungi al carrello</button> </div>
+   </div>
+ </div>
+</div>
