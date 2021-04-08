@@ -120,7 +120,6 @@ font-size: 2.3rem;
 .section-subtitle{
   font-size:1.75rem;
   text-decoration: overline;
-  padding-top: 3%;
 }
 
 .circle-container a{
@@ -165,7 +164,6 @@ hr{
     border: none;
     border-radius: 0px;
     background-color: #fff;
-    margin-bottom: 8%;
 }
 
 .text1 {

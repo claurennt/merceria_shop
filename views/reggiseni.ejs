@@ -1,7 +1,7 @@
 <%- include("partials/header"); -%>
 
 <div class="container mb-5 mt-5">
-  <p class="section-subtitle my-4 pb-5">Canottiere Donna</p>
+  <p class="section-subtitle my-4 pb-5">Reggiseni</p>
   <div class="row">
 
     <% for (let i = 0; i<8; i++) { %>
@@ -16,12 +16,12 @@
             <span class="text1 d-block">Materiale: <%= foundItems[i].material %></span>
           </div>
           <p class="m-1"> Taglia: <%= foundItems[i].size %></p>
-          <p class="m-1 priceData" ><strong> <%= foundItems[i].price %>€ </strong> </p>
+          <p class="m-1"><strong> <%= foundItems[i].price %>€ </strong> </p>
 
-
+        </div>
         <div class="cartBar  text-center mx-auto  m-2 cursor">
-          <button type="submit" name="button" class="btn cartBtn btn-link text-uppercase" id="<%= foundItems[i].name %>">Aggiungi al carrello</button>
-         </div></div>
+          <button type="submit" name="button" class="btn btn-link text-uppercase" id="<%= foundItems[i].name %>">Aggiungi al carrello</button>
+         </div>
       </div>
     </div>
 
@@ -29,10 +29,13 @@
 
   </div>
 
-    <div class="cartDiv">
-
-    </div>
+  <div class="cartDiv">
 
   </div>
+</div>
 
-    <%- include("partials/footer"); -%>
+
+
+
+
+<%- include("partials/footer"); -%>
