@@ -12,5 +12,5 @@ async function getWeather() {
 }
 
 module.exports = {
-  getWeather
+  getWeather: getWeather
 }

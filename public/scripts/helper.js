@@ -6,8 +6,18 @@ document.querySelector(".navbar-toggler").addEventListener("click", () => {
 
 
 
-let foundItems = []
-//create constructor object
+// show dropdown list on hover
+const dropToggle = document.querySelector(".dropdown-toggle")
+dropToggle.addEventListener("mouseover", function() {
+  document.querySelector("#dropList").classList.add("show")
+})
+// remove dropdown list on mouseleave
+const dropList = document.querySelector("#dropList")
+dropList.addEventListener("mouseleave", function(event){
+      event.target.classList.remove("show")
+})
+
+
 
 
 let basket = []
@@ -22,7 +32,7 @@ const addToBasket = (item) => {
   basket.push(item)
 }
 
-// function to add clicked products (name and price) to cart 
+// function to add clicked products (name and price) to cart
 const addToCartOnClick = () => {
 
   let cartButtons = document.querySelectorAll(".cartBtn")
@@ -35,8 +45,8 @@ const addToCartOnClick = () => {
       let cartItem = document.createElement("li");
       cartItem.innerText = `${itemName} ${price} €`;
       document.querySelector(".cartDiv").append(cartItem)
-      console.log(price);
       addToBasket(price)
+      calculateSum(basket)
     })
   }
 }
