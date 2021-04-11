@@ -10,7 +10,7 @@ const WomanBra = require(__dirname + '/public/models/productsModel.js').WomanBra
 const WomanSlip = require(__dirname + '/public/models/productsModel.js').WomanSlip
 const CollantSock = require(__dirname + '/public/models/productsModel.js').CollantSock
 // const _ = require('lodash');
-
+const uri = process.env.MONGODB_URI;
 
 const app = express();
 
