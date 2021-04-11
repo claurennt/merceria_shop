@@ -4,10 +4,11 @@ const express = require('express')
 const ejs = require('ejs')
 const fetch = require('node-fetch');
 const mongoose = require('mongoose')
-const getWeather = require(__dirname + '/weather.js').getWeather
+const getWeather = require(__dirname + '/public/scripts//weather.js').getWeather
 const WomanTshirt = require(__dirname + '/public/models/productsModel.js').WomanTshirt
 const WomanBra = require(__dirname + '/public/models/productsModel.js').WomanBra
 const WomanSlip = require(__dirname + '/public/models/productsModel.js').WomanSlip
+const CollantSock = require(__dirname + '/public/models/productsModel.js').CollantSock
 // const _ = require('lodash');
 
 
@@ -91,6 +92,19 @@ app.get('/prodotti/:productName', (req, res) => {
   } else if ((productName == "slip-donna")) {
 
     WomanSlip.find({}, function(err, foundItems) {
+
+      getWeather().then((weatherData) => {
+        res.render(productName, {
+          weatherData: weatherData,
+          foundItems: foundItems
+        })
+
+      });
+    })
+
+  } else if (productName == "calze-collant-donna") {
+
+    CollantSock.find({}, function(err, foundItems) {
 
       getWeather().then((weatherData) => {
         res.render(productName, {

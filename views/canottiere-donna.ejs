@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%>
 
-<div class="container mb-5 mt-5">
+<div class="container mb-5 mt-5 ">
   <p class="section-subtitle my-4 pb-5">Canottiere Donna</p>
   <div class="row">
 
@@ -16,7 +16,7 @@
             <span class="text1 d-block">Materiale: <%= foundItems[i].material %></span>
           </div>
           <p class="m-1"> Taglia: <%= foundItems[i].size %></p>
-          <p class="m-1 priceData" ><strong> <%= foundItems[i].price %>€ </strong> </p>
+          <p class="m-1 priceData" ><strong> <%= foundItems[i].price %> € </strong> </p>
 
 
         <div class="cartBar  text-center mx-auto  m-2 cursor">
@@ -30,7 +30,10 @@
   </div>
 
     <div class="cartDiv">
+<ul class="cartList">
 
+</ul>
+<p class="totalSum"></p>
     </div>
 
   </div>

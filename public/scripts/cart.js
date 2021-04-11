@@ -1,31 +1,14 @@
-document.querySelector(".navbar-toggler").addEventListener("click", () => {
-  let menu = document.querySelector("#navbarCollapse")
-  menu.classList.toggle("show")
-  menu.classList.toggle("collapse")
-})
-
-
-
-// show dropdown list on hover
-const dropToggle = document.querySelector(".dropdown-toggle")
-dropToggle.addEventListener("mouseover", function() {
-  document.querySelector("#dropList").classList.add("show")
-})
-// remove dropdown list on mouseleave
-const dropList = document.querySelector("#dropList")
-dropList.addEventListener("mouseleave", function(event){
-      event.target.classList.remove("show")
-})
-
-
-
-
 let basket = []
 
 
+
 let cartTitle = document.createElement("h5")
-cartTitle.innerHTML = "Carrello"
+cartTitle.innerText = "Carrello"
 document.querySelector(".cartDiv").prepend(cartTitle)
+
+
+
+
 
 // function to push the item to the basket
 const addToBasket = (item) => {
@@ -40,39 +23,40 @@ const addToCartOnClick = () => {
   for (let i = 0, y = 0; i<cartButtons.length, y<clickedItemPrice.length; i++, y++) {
     cartButtons[i].addEventListener("click", (event) => {
       let itemName = event.target.id
-      let itemPrice = clickedItemPrice[y].innerText
-      let price = itemPrice.substring(0,2)
+      let priceData = String(clickedItemPrice[y].innerText)
+      let reg = /\d+\.\d{2}/g;
+      let price = priceData.match(reg)
       let cartItem = document.createElement("li");
-      cartItem.innerText = `${itemName} ${price} €`;
-      document.querySelector(".cartDiv").append(cartItem)
+      cartItem.innerHTML = `${itemName} ${price} €`;
+      document.querySelector(".cartList").appendChild(cartItem)
       addToBasket(price)
-      calculateSum(basket)
+displaySum()
     })
-  }
+    }
+
+
 }
 
 // function to calculate sum of basket
-const calculateSum = (someBasket) => {
+ function calculateSum (basket)  {
   let totalSum = 0
-  // look through the basket and caluculate the totalSum by the prize
-  for (product of someBasket) {
-    totalSum = totalSum + Number(product)
+  // look through the basket and caluculate the totalSum by the price
+  for (price of basket) {
+                          //converts the parameter into a number for the calculation
+    totalSum = totalSum + Number(price)
   }
-  return totalSum
+  return totalSum.toFixed(2)
+}
+
+const displaySum = () => {
+let totalSum = document.querySelector(".totalSum")
+return totalSum.innerHTML = ("<p>Totale: <strong>" + calculateSum(basket) +" Euro</strong>")
 }
 
 addToCartOnClick()
 
-let buttonSum = document.createElement('button')
-document.querySelector(".cartDiv").append(buttonSum)
-buttonSum.setAttribute("type", "submit")
-buttonSum.innerText = "Clicca per vedere somma da pagare"
 
 
-buttonSum.addEventListener("click", function() {
-  let sum = calculateSum(basket)
-  buttonSum.innerText = `Totale da pagare: ${sum} Euro`
-})
 
 
 //   button.addEventListener("click", function(event) {

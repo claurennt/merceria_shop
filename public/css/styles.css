@@ -1,6 +1,7 @@
 body{
   margin-top:0;
   text-align:center;
+font-family: 'Source Sans Pro', serif;
 }
 
 a:hover {
@@ -30,13 +31,16 @@ z-index: 2;
 
 }
 
-.weatherDiv p, img {
+ .weatherDiv p,img{
   margin: -4px;
+
+
 }
 
 .weatherIcon{
-  width: 50px;
-  height: auto
+  width: 45px;
+  height: auto;
+  background-color: rgb(109, 220, 207, 0.6);
 }
 .header {
   background-color: #f9f9f9;
@@ -59,7 +63,6 @@ h1 {
 }
 
 .nav-link {
-font-family: 'Source Sans Pro', serif;
   font-size: 1.1rem;
       color: #495464;
       letter-spacing: 2px;
@@ -160,6 +163,8 @@ hr{
 
 /* prodottiName */
 
+
+
 .card {
     border: none;
     border-radius: 0px;
@@ -175,10 +180,6 @@ hr{
     line-height: 17px
 }
 
-.cartDiv{
-    background-color: #98ded9;
-    border-style: dotted;
-}
 
 .cartBar {
     background: #98ded9;
@@ -195,6 +196,25 @@ hr{
 }
 .cursor {
     cursor: pointer
+}
+
+.cartDiv{
+  position:relative;
+  width: 40%;
+  height:auto;
+    border: groove 0.5px;
+    border-color: rgb(73, 84, 100, 0.4);
+    background-color: rgb(109, 220, 207, 0.1);
+}
+.cartList  {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.totalSum{
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 /* storia */
