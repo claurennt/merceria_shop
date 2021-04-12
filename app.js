@@ -10,7 +10,6 @@ const WomanBra = require(__dirname + '/public/models/productsModel.js').WomanBra
 const WomanSlip = require(__dirname + '/public/models/productsModel.js').WomanSlip
 const CollantSock = require(__dirname + '/public/models/productsModel.js').CollantSock
 // const _ = require('lodash');
-const uri = process.env.MONGODB_URI;
 
 const app = express();
 
@@ -126,10 +125,9 @@ app.get('/prodotti/:productName', (req, res) => {
   }
 });
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-app.listen(port);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
+});
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+// app.listen(3000, () => console.log('Example app listening on port 3000!'));
