@@ -19,10 +19,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 
 
-var url = process.env.URI_MONGO || process.env.DATABASEURL
-mongoose.connect(url, { useNewUrlParser: true });
-
-
 
 
 
