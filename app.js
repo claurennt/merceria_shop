@@ -1,6 +1,4 @@
 require('dotenv').config()
-const mongoUrl = process.env.MONGODB_URI;
-const databaseUrl = process.env.DATABASEURL;
 const express = require('express')
 const ejs = require('ejs')
 const fetch = require('node-fetch');

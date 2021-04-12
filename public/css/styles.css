@@ -231,13 +231,14 @@ hr{
 /* Bottom Section */
 .footer {
   text-align: center;
-  padding: 2% 7%;
+  padding: 1% 7%;
   background-color: #a5abbb;
 
 }
 
 .footer-icon{
   margin: 10px 10px;
+  color: blue !important;
 }
 
 .foot-par{
