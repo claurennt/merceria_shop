@@ -1,5 +1,6 @@
 require('dotenv').config()
-const passwordMongo = process.env.PASSWORD_MONGO;
+const mongoUrl = process.env.URI_MONGO;
+const databaseUrl = process.env.DATABASEURL;
 const express = require('express')
 const ejs = require('ejs')
 const fetch = require('node-fetch');
@@ -18,13 +19,15 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + "/public"));
 
 
-
+var url = process.env.URI_MONGO || process.env.DATABASEURL
+mongoose.connect(url, { useNewUrlParser: true });
 
 
 
 
 
 app.get('/', (req, res) => {
+
   //use imported getWeather bound to const weather and then render index passing in the key value paths for the partials 'header'
   getWeather().then((weatherData) => {
     res.render('index', {
