@@ -1,5 +1,5 @@
 require('dotenv').config()
-const mongoUrl = process.env.URI_MONGO;
+const mongoUrl = process.env.MONGODB_URI;
 const databaseUrl = process.env.DATABASEURL;
 const express = require('express')
 const ejs = require('ejs')
@@ -129,4 +129,4 @@ if (port == null || port == "") {
   port = 3000;
 }
 
-app.listen(port, 3000, () => console.log('Server has started successfully.'));
+app.listen(port, () => console.log('Server has started successfully'));
