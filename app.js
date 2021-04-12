@@ -8,6 +8,7 @@ const WomanTshirt = require(__dirname + '/public/models/productsModel.js').Woman
 const WomanBra = require(__dirname + '/public/models/productsModel.js').WomanBra
 const WomanSlip = require(__dirname + '/public/models/productsModel.js').WomanSlip
 const CollantSock = require(__dirname + '/public/models/productsModel.js').CollantSock
+const LingerieSet = require(__dirname + '/public/models/productsModel.js').LingerieSet
 // const _ = require('lodash');
 
 const app = express();
@@ -101,6 +102,19 @@ app.get('/prodotti/:productName', (req, res) => {
   } else if (productName == "calze-collant-donna") {
 
     CollantSock.find({}, function(err, foundItems) {
+
+      getWeather().then((weatherData) => {
+        res.render(productName, {
+          weatherData: weatherData,
+          foundItems: foundItems
+        })
+
+      });
+    })
+
+  } else if (productName == "completi-intimo") {
+
+    LingerieSet.find({}, function(err, foundItems) {
 
       getWeather().then((weatherData) => {
         res.render(productName, {
